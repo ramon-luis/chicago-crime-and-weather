@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <title>Submit Crime</title>
+    <link type="text/css" rel="stylesheet" href="/elegant-aero.css" />
+  </head>
+  <body style='background-image:URL("handcuffs.jpg");background-repeat:no-repeat;background-position:center top;
+	-webkit-background-size:100%;-moz-background-size:100%;-o-background-size:100%;background-size: 100%;'>
+    <p style="margin-bottom:5px"/>
+    <h2 class="elegant-aero" style="margin-left:30%;text-align:center;display:inline-block;color:#5E5E5E;background:#FFFFFF">&nbsp;Submit crime report&nbsp;</h2>
+    <form action="/cgi-bin/ramonlrodriguez/submit-crime.pl" style="background:#FFFFFF;width:60%;margin:auto"
+	  method="get" class="elegant-aero">
+      <label> 
+	<span>Year:</span> <input type="number" name="year" value="2016"/>
+      </label>
+      <label style="font-weight:bold;color:#5E5E5E">
+	good weather? <input type="checkbox" name="isGoodWeather" value="1"/>
+	is arrest? <input type="checkbox" name="isArrest" value="1"/>
+	is domestic? <input type="checkbox" name="isDomestic" value="1"/>
+	is violent crime? <input type="checkbox" name="isViolentCrime" value="1"/>
+	is sexual assault? <input type="checkbox" name="isSexualAssault" value="1"/>
+	is burglary? <input type="checkbox" name="isBurglary" value="1"/>
+	is vandalism? <input type="checkbox" name="isVandalism" value="1"/>
+	is prostitution? <input type="checkbox" name="isProstitution" value="1"/>
+      </label>
+      <label>
+	<span>&nbsp;</span><input type="submit" value="Submit">
+      </label>
+    </form>
+    <iframe frameBorder="0" name="results_iframe" style="width:100%"/>
+  </body>
+</html>
