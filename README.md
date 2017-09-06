@@ -1,15 +1,15 @@
 # Chicago Crime and Weather
 
-Chicago Crime and Weather is a big data web application that analyzes the relationship between weather and violent crime in Chicago daily from 2001-2016.  The application uses a lambda architecture to process large amounts of data in a scalable form: data from multiple sources is serialized and grouped together into a single, fact-based distrubuted data table in batch processing with pre-computed common queries while a separate speed layer handles new data that has not yet been batch processed.
+Chicago Crime and Weather is a big data web application that analyzes the relationship between weather and violent crime in Chicago daily from 2001-2016.  The application uses a lambda architecture to process large amounts of data in a scalable form: data from multiple sources is serialized and grouped together into a single, fact-based distrubuted data table with common queries pre-computed  in batch processing while a separate speed layer handles new data that has not yet been batch processed.
 
-Much of the code was adapted from code provided in MPCS 53013 Big Data at the University of Chicago.  The emphasis of project the was on architecture & functionality, not elegance... and it shows in the code.  Apologies in advance.
+Much of the code is adapted from code provided in MPCS 53013 Big Data at the University of Chicago.  The emphasis of project was on architecture & functionality, not elegance... and it shows in the code.  Apologies in advance.
 
 ## What's Here
 
 * `crimeTopology/` streams CSV crime data into HDFS using Kafka
 * `html/` handles the (admittedly crude) HTML and CSS that for the front-end
 * `perl/` runs scripts to query data or add new data (to speed layer)
-* `pig/` combines weather and crime into single HBase table that is stored in HDFS
+* `pig/` combines weather and crime into a single HBase table
 * `weatherIngest/` serializes & stores weather data in HDFS as a sequence file
 
 ## How It Works
